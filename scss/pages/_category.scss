@@ -1,0 +1,29 @@
+.page-title{
+    font-family: 'Roboto', sans-serif;
+    @apply text-[36px] py-[30px] font-black;
+}
+
+.category-container{
+    .post{
+        @apply flex flex-col gap-[23px];
+
+        .card:first-child{
+            @apply flex flex-col gap-[25px] pb-[15px];
+
+            .image-container{
+                @apply relative;
+                img{
+                    @apply h-[430px] sm:h-[244px] w-full object-cover;
+                }
+
+                .tag{
+                    @apply absolute bottom-0 ps-2;
+                }
+            }
+
+            .title{
+                @apply text-[24px] leading-[28px] sm:text-[20px] font-black line-clamp-3;
+            }
+        }
+    }
+}

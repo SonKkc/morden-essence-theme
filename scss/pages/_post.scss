@@ -1,0 +1,83 @@
+.post-detail{
+    @apply flex flex-col gap-[30px];
+    ._head-info{
+        @apply flex flex-col gap-[17px];
+
+        ._title{
+            @apply text-[36px] sm:text-[20px] font-black;
+        }
+    
+        ._info{
+            @apply flex items-center justify-between;
+
+            ._author-date{
+                @apply flex items-center gap-[16px];
+
+                ._item{
+                    @apply text-grayy-80 flex items-center gap-[8px];
+                }
+            }
+
+            ._share{
+                @apply flex items-center gap-[5px];
+            }
+        }
+    }
+
+    ._content{
+        @apply flex flex-col gap-[15px];
+
+        img{
+            @apply w-full object-cover;
+        }
+    }
+
+}
+
+._text-content{
+    @apply flex flex-col;
+
+    h1{
+        @apply text-[26px] font-black pb-[20px];
+    }
+
+    h2{
+        @apply text-[24px] font-black pb-[20px];
+    }
+
+    h3{
+        @apply text-[22px] font-black pb-[6px];
+    }
+
+    p{
+        @apply text-[20px] font-medium text-grayy-80 pb-[20px];
+    }
+
+    img{
+        @apply w-full h-auto pt-[15px] object-cover pb-[20px];
+    }
+
+    blockquote{
+        font-family: "Lato", sans-serif;
+        @apply italic text-grayy-80 ps-[40px] mb-[20px] text-[20px] border-s-[3px] border-whitee sm:text-[16px];
+    }
+
+    ul{
+        @apply list-disc pl-[30px] pb-[20px];
+
+        li{
+            @apply text-[20px] text-whitee font-normal sm:text-[16px];
+            span{
+                @apply font-semibold;
+            }
+        } 
+    }
+}
+
+.-tags_category{
+    @apply flex flex-wrap gap-[15px] pt-2 mb-4 mt-4;
+  
+    a {
+      @apply px-3 py-2 text-[16px] text-[#757575] leading-none bg-[#F5F5F5] border-transparent rounded-[8px] font-normal;
+    }
+}

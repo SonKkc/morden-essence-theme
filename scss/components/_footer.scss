@@ -1,0 +1,50 @@
+/* Footer styles */
+.footer {
+    @apply bg-black-30 pt-[55px] pb-[50px] relative overflow-hidden;
+
+    .-logo{
+        @apply flex flex-col gap-[12px];
+
+        p{
+            @apply text-[12px] text-whitee/80 font-normal;
+        }
+    }
+}
+
+.footer::before {
+    @apply absolute inset-0 z-[0] w-full h-full sm:bg-black-30;
+    content: '';
+    background: linear-gradient(-135deg, #141313 14.2%, #1E1E1E 14.2%, #1E1E1E 85.8%, #141313 85.8%);
+}
+
+._cont {
+    @apply relative z-[1] flex gap-[125px] sm:flex-col sm:gap-[30px];
+
+    ._nav{
+        @apply grid grid-cols-3 gap-[123px] sm:gap-[24px] sm:grid-cols-2 sm:grid-flow-row;
+
+        .-col{
+            @apply flex flex-col gap-[24px];
+
+            h2{
+                @apply text-[16px] font-bold;
+            }
+
+            .-item{
+                @apply flex flex-col gap-[12px] text-[14px] leading-none font-normal;
+
+                a{
+                    @apply flex items-center gap-2;
+
+                    span{
+                        @apply leading-[14px]
+                    }
+                }
+            }
+        }
+
+        .col:nth-child(2){
+            @apply sm:justify-end;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.breadcrumb-container{
+    @apply w-full py-[45px];
+
+    .__list{
+        @apply flex items-center line-clamp-1 gap-2;
+
+        li{
+            @apply flex items-center gap-2 text-[16px] font-medium;
+
+            span{
+                @apply text-[16px] font-normal;
+            }
+        }
+    }
+}

@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "League Spartan", sans-serif;
+  @apply bg-black text-whitee;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.my_container {
+  @apply max-w-[994px] mx-auto sm:px-[30px] md:px-[15px];
+}
+
+.flex-center-between {
+  @apply flex items-center justify-between;
+}
+
+.grid-col3-gap35 {
+  @apply grid grid-cols-3 gap-[35px] sm:grid-cols-1 sm:gap-0;
+}
+.grid-col3-gap35 .left_content {
+  @apply col-span-2;
+}
+.grid-col3-gap35 .right_content {
+  @apply col-span-1;
+}
+
+.grid-col2-gap4 {
+  @apply grid grid-cols-2 gap-[19px] sm:grid-cols-1;
+}
+
+.span-before {
+  @apply before:block before:absolute before:-inset-1 before:-skew-x-[25deg] relative;
+}
+.span-before .span-cont {
+  font-family: "Roboto", sans-serif;
+  @apply relative text-white w-[75px] inline-block text-center uppercase text-[10px] font-black;
+}
+
+.info {
+  @apply flex items-center gap-2 py-[3px];
+}
+.info span {
+  font-family: "Roboto", sans-serif;
+  @apply text-[12px] font-medium;
+}
+
+.card {
+  @apply flex gap-4;
+}
+.card img {
+  @apply w-[146px] h-[116px] object-cover;
+}
+.card .content {
+  @apply flex flex-col gap-2;
+}
+.card .content .tag {
+  @apply ps-[10px];
+}
+.card .content .title {
+  @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+}
+
+.card-2 {
+  @apply flex gap-[20px] items-center;
+}
+.card-2 img {
+  @apply w-[204px] h-[139px] sm:h-[116px] sm:w-[146px] object-cover;
+}
+.card-2 .content {
+  @apply flex flex-col gap-2;
+}
+.card-2 .content .tag {
+  @apply ps-[10px];
+}
+.card-2 .content .title {
+  @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+}
+
+.card-col {
+  @apply flex flex-col gap-2;
+}
+.card-col img {
+  @apply object-cover w-full h-[135px] sm:h-[213px];
+}
+.card-col .tag {
+  font-family: "Roboto", sans-serif;
+  @apply text-[12px] font-medium uppercase;
+}
+.card-col .title {
+  @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+}
+
+.section-title {
+  @apply flex items-center gap-4 mb-[30px];
+}
+.section-title h2 {
+  @apply text-[20px] leading-[23px] font-black capitalize;
+}
+.section-title .line {
+  @apply relative w-full h-[3px] bg-grayy-30 flex-1;
+}
+.section-title .line .line-active {
+  @apply absolute w-0 bottom-0 left-0 h-full transition-all duration-300 ease-out bg-grayy;
+}
+
+.eclip {
+  @apply w-[9px] h-[9px] rounded-full bg-oceann;
+}
+
+.line {
+  @apply w-full h-[3px] bg-grayy-30 flex-1;
+}
+
+.section-title h2:hover ~ .line .line-active {
+  @apply w-full;
+}
+
+.see-more {
+  @apply flex items-center gap-4 mt-[40px];
+}
+.see-more .btn {
+  @apply flex items-center justify-center px-[39px] py-[8px] bg-[#D9D9D9] rounded-[3px];
+}
+.see-more .btn span {
+  @apply text-[16px] leading-[15px] text-oceann font-black uppercase;
+}
+
+.advertisement {
+  @apply bg-darkk flex items-center justify-center mx-auto;
+}
+
+.hot-categories {
+  @apply flex flex-col;
+}
+.hot-categories ._cont {
+  @apply flex flex-col gap-[12px];
+}
+.hot-categories ._cont .item {
+  @apply relative w-full h-[80px] sm:h-[96px] rounded-[3px] overflow-hidden;
+}
+.hot-categories ._cont .item .bg-img {
+  @apply bg-cover bg-no-repeat bg-center h-full inset-0 absolute;
+  width: 110%;
+  background-position: center left -10px;
+  transition: background-position 0.2s ease;
+}
+.hot-categories ._cont .item .overlay {
+  @apply absolute z-10 px-[26px] inset-0 bg-overlayy flex items-center justify-between gap-2;
+}
+.hot-categories ._cont .item .overlay span {
+  @apply text-[16px] font-black capitalize;
+}
+.hot-categories ._cont .item .overlay .circle {
+  @apply w-[27px] h-[27px] rounded-full bg-whitee flex items-center justify-center transition duration-200 ease-in-out;
+}
+.hot-categories ._cont .item .overlay .circle span {
+  @apply text-[10px] leading-[10px] font-semibold text-black transition duration-200 ease-in-out;
+}
+.hot-categories ._cont .item:hover .bg-img {
+  background-position: center;
+}
+.hot-categories ._cont .item:hover .overlay .circle {
+  @apply bg-oceann;
+}
+.hot-categories ._cont .item:hover .overlay .circle span {
+  @apply text-whitee;
+}
+
+/* Footer styles */
+.footer {
+  @apply bg-black-30 pt-[55px] pb-[50px] relative overflow-hidden;
+}
+.footer .-logo {
+  @apply flex flex-col gap-[12px];
+}
+.footer .-logo p {
+  @apply text-[12px] text-whitee/80 font-normal;
+}
+
+.footer::before {
+  @apply absolute inset-0 z-[0] w-full h-full sm:bg-black-30;
+  content: "";
+  background: linear-gradient(-135deg, #141313 14.2%, #1E1E1E 14.2%, #1E1E1E 85.8%, #141313 85.8%);
+}
+
+._cont {
+  @apply relative z-[1] flex gap-[125px] sm:flex-col sm:gap-[30px];
+}
+._cont ._nav {
+  @apply grid grid-cols-3 gap-[123px] sm:gap-[24px] sm:grid-cols-2 sm:grid-flow-row;
+}
+._cont ._nav .-col {
+  @apply flex flex-col gap-[24px];
+}
+._cont ._nav .-col h2 {
+  @apply text-[16px] font-bold;
+}
+._cont ._nav .-col .-item {
+  @apply flex flex-col gap-[12px] text-[14px] leading-none font-normal;
+}
+._cont ._nav .-col .-item a {
+  @apply flex items-center gap-2;
+}
+._cont ._nav .-col .-item a span {
+  @apply leading-[14px];
+}
+._cont ._nav .col:nth-child(2) {
+  @apply sm:justify-end;
+}
+
+header {
+  @apply sm:py-[20px] z-20;
+}
+header .logo img {
+  @apply sm:h-[40px];
+}
+
+.navbar {
+  @apply relative z-20;
+}
+
+.nav_link {
+  @apply flex items-center text-whitee sm:hidden;
+}
+.nav_link .item {
+  @apply py-[35px] px-[16.5px] flex items-center gap-1;
+}
+.nav_link .item a {
+  @apply text-[14px] font-bold block;
+}
+.nav_link .item p {
+  @apply text-[14px] font-bold block;
+}
+.nav_link .item svg {
+  @apply text-whitee font-bold;
+}
+.nav_link .item:hover a {
+  @apply text-oceann;
+}
+.nav_link .item:hover p {
+  @apply text-oceann;
+}
+.nav_link .item:hover svg {
+  @apply text-oceann;
+}
+
+.search {
+  @apply flex items-center gap-4 rounded-[10px] bg-grayy max-h-[27px] max-w-[163px] px-[9px] py-[4px] sm:hidden;
+}
+.search input {
+  @apply flex-1 w-full border-0 bg-transparent text-black-30 outline-none text-[14px];
+}
+
+.menulv2 {
+  @apply absolute transition w-full h-fit bg-gray-200 right-0 top-full left-0 z-10;
+}
+
+.mobile-menu {
+  @apply sm:block hidden pe-[10px];
+}
+
+.nav__sidebar {
+  @apply w-full h-screen bg-black-30 fixed top-0 left-0 z-20;
+}
+.nav__sidebar .__container {
+  @apply p-6;
+}
+.nav__sidebar .__container .__logo {
+  @apply relative w-full p-4;
+}
+.nav__sidebar .__container .__logo .__name {
+  @apply flex items-center gap-4 w-full justify-center;
+}
+.nav__sidebar .__container .__logo .__name svg {
+  @apply w-[25px] h-[25px];
+}
+.nav__sidebar .__container .__logo .__name p {
+  font-family: "Barlow", sans-serif;
+  @apply text-3xl italic font-black text-white uppercase;
+}
+.nav__sidebar .__container .__logo .-btn_exit {
+  @apply absolute top-0 right-0;
+}
+.nav__sidebar .__container .__logo .-btn_exit svg {
+  @apply w-[25px] h-[25px];
+}
+.nav__sidebar .__container .__navbar {
+  @apply my-10 px-[56px];
+}
+.nav__sidebar .__container .__list {
+  @apply flex flex-col items-center;
+}
+.nav__sidebar .__container .__list .-item {
+  @apply w-full p-4 text-center;
+}
+.nav__sidebar .__container .__list .-item .__link {
+  font-family: "Gotham-Light", sans-serif;
+  @apply text-[20px] leading-[24px] uppercase text-white font-medium text-center;
+}
+.nav__sidebar .__container .__list .-item .-submenu {
+  @apply flex flex-col gap-4 border-t-2 border-b-2 border-gray-600 py-4 my-2;
+}
+.nav__sidebar .__container .__list .-item .-submenu .-subitem {
+  @apply text-[18px] leading-[22px] font-medium normal-case text-white;
+}
+.nav__sidebar .__container .__search_bar {
+  @apply w-full py-2 flex items-center gap-2 border-b-2 border-white;
+}
+.nav__sidebar .__container .__search_bar input {
+  @apply w-full bg-transparent h-5 text-[16px] leading-[19.2px] font-medium text-[#FFFFFF] border-transparent outline-none ps-0;
+}
+.nav__sidebar .__container .__search_bar .-btn_search {
+  @apply text-white w-[12px] h-[12px] me-2;
+}
+
+.breadcrumb-container {
+  @apply w-full py-[45px];
+}
+.breadcrumb-container .__list {
+  @apply flex items-center line-clamp-1 gap-2;
+}
+.breadcrumb-container .__list li {
+  @apply flex items-center gap-2 text-[16px] font-medium;
+}
+.breadcrumb-container .__list li span {
+  @apply text-[16px] font-normal;
+}
+
+.head-section {
+  @apply py-[60px] sm:py-[30px];
+}
+.head-section .left_content {
+  @apply flex flex-col gap-[25px];
+}
+.head-section .left_content .image-container {
+  @apply relative;
+}
+.head-section .left_content .image-container img {
+  @apply w-full object-cover h-[322px] sm:h-[244px];
+}
+.head-section .left_content .image-container .tag {
+  @apply absolute bottom-0 ps-2;
+}
+.head-section .left_content .title h1 {
+  @apply text-[22px] leading-[25px] font-black line-clamp-2 sm:line-clamp-3 sm:text-[20px];
+}
+.head-section .right_content {
+  @apply flex flex-col gap-[23px];
+}
+
+.top-stories {
+  @apply bg-black-30 py-[50px] sm:py-[28px];
+}
+.top-stories ._cont {
+  @apply grid grid-cols-4 gap-[19px] sm:grid-cols-1 sm:gap-[30px];
+}
+
+.featured-post {
+  @apply pt-[60px] sm:py-[30px];
+}
+.featured-post ._cont {
+  @apply grid grid-cols-3 gap-[20px] sm:grid-cols-1 sm:gap-[30px];
+}
+.featured-post ._cont .post-col {
+  @apply flex flex-col mb-[50px] sm:mb-0;
+}
+.featured-post ._cont .post-col .post-1 {
+  @apply pb-[20px] flex flex-col gap-2 sm:pb-[10px];
+}
+.featured-post ._cont .post-col .post-1 img {
+  @apply h-[196px] w-full object-cover sm:h-[228px];
+}
+.featured-post ._cont .post-col .post-1 .tag {
+  font-family: "Roboto", sans-serif;
+  @apply text-[12px] font-medium uppercase pt-[10px];
+}
+.featured-post ._cont .post-col .post-1 .title {
+  @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+}
+.featured-post ._cont .post-col .post {
+  @apply text-[14px] leading-[16px] font-normal py-[20px] border-t border-grayy-10 line-clamp-3 sm:py-[10px];
+}
+.featured-post ._cont .post-col .post:last-child {
+  @apply pb-0;
+}
+
+.bg-newsletter {
+  @apply bg-black-30 py-[60px] sm:py-[25px];
+}
+
+.newsletter .line-flex {
+  @apply flex items-center gap-6;
+}
+.newsletter .content {
+  @apply max-w-[656px] mx-auto py-[30px] sm:py-[24px] sm:w-full;
+}
+.newsletter .content h2 {
+  @apply text-[32px] font-bold capitalize w-7/12 sm:w-8/12 sm:text-[24px];
+}
+.newsletter .content .input {
+  font-family: "Roboto", sans-serif;
+  @apply w-full flex items-center justify-center bg-whitee rounded-[3px] border-transparent my-[30px] sm:my-[25px];
+}
+.newsletter .content .input input {
+  @apply w-full text-[20px] leading-[24px] sm:text-[10px] sm:ps-[17px] ps-[30px] font-normal bg-transparent outline-none shadow-none text-gray-800/50;
+}
+.newsletter .content .input button {
+  @apply py-[13px] px-[30px] bg-oceann text-white rounded-[3px] text-[24px] leading-[24px] font-semibold uppercase sm:text-[14px] sm:leading-[14px] sm:py-[8px] sm:px-[18px];
+}
+.newsletter .content .social {
+  @apply flex items-center justify-end gap-4;
+}
+.newsletter .content .social span {
+  @apply text-[15px] font-black uppercase;
+}
+
+.latest-news {
+  @apply grid grid-cols-3 gap-[35px] py-[60px] sm:grid-cols-1 sm:gap-0;
+}
+.latest-news .left_content {
+  @apply col-span-2;
+}
+.latest-news .left_content ._cont {
+  @apply flex flex-col gap-[23px];
+}
+.latest-news .left_content ._cont .item {
+  @apply flex gap-[20px] items-center;
+}
+.latest-news .left_content ._cont .item img {
+  @apply w-[204px] h-[139px] sm:h-[116px] sm:w-[146px] object-cover;
+}
+.latest-news .left_content ._cont .item .content {
+  @apply flex flex-col gap-2;
+}
+.latest-news .left_content ._cont .item .content .tag {
+  @apply ps-[10px];
+}
+.latest-news .left_content ._cont .item .content .title {
+  @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+}
+.latest-news .right_content {
+  @apply flex flex-col gap-[30px] sm:mt-[30px];
+}
+
+.page-title {
+  font-family: "Roboto", sans-serif;
+  @apply text-[36px] py-[30px] font-black;
+}
+
+.category-container .post {
+  @apply flex flex-col gap-[23px];
+}
+.category-container .post .card:first-child {
+  @apply flex flex-col gap-[25px] pb-[15px];
+}
+.category-container .post .card:first-child .image-container {
+  @apply relative;
+}
+.category-container .post .card:first-child .image-container img {
+  @apply h-[430px] sm:h-[244px] w-full object-cover;
+}
+.category-container .post .card:first-child .image-container .tag {
+  @apply absolute bottom-0 ps-2;
+}
+.category-container .post .card:first-child .title {
+  @apply text-[24px] leading-[28px] sm:text-[20px] font-black line-clamp-3;
+}
+
+.post-detail {
+  @apply flex flex-col gap-[30px];
+}
+.post-detail ._head-info {
+  @apply flex flex-col gap-[17px];
+}
+.post-detail ._head-info ._title {
+  @apply text-[36px] sm:text-[20px] font-black;
+}
+.post-detail ._head-info ._info {
+  @apply flex items-center justify-between;
+}
+.post-detail ._head-info ._info ._author-date {
+  @apply flex items-center gap-[16px];
+}
+.post-detail ._head-info ._info ._author-date ._item {
+  @apply text-grayy-80 flex items-center gap-[8px];
+}
+.post-detail ._head-info ._info ._share {
+  @apply flex items-center gap-[5px];
+}
+.post-detail ._content {
+  @apply flex flex-col gap-[15px];
+}
+.post-detail ._content img {
+  @apply w-full object-cover;
+}
+
+._text-content {
+  @apply flex flex-col;
+}
+._text-content h1 {
+  @apply text-[26px] font-black pb-[20px];
+}
+._text-content h2 {
+  @apply text-[24px] font-black pb-[20px];
+}
+._text-content h3 {
+  @apply text-[22px] font-black pb-[6px];
+}
+._text-content p {
+  @apply text-[20px] font-medium text-grayy-80 pb-[20px];
+}
+._text-content img {
+  @apply w-full h-auto pt-[15px] object-cover pb-[20px];
+}
+._text-content blockquote {
+  font-family: "Lato", sans-serif;
+  @apply italic text-grayy-80 ps-[40px] mb-[20px] text-[20px] border-s-[3px] border-whitee sm:text-[16px];
+}
+._text-content ul {
+  @apply list-disc pl-[30px] pb-[20px];
+}
+._text-content ul li {
+  @apply text-[20px] text-whitee font-normal sm:text-[16px];
+}
+._text-content ul li span {
+  @apply font-semibold;
+}
+
+.-tags_category {
+  @apply flex flex-wrap gap-[15px] pt-2 mb-4 mt-4;
+}
+.-tags_category a {
+  @apply px-3 py-2 text-[16px] text-[#757575] leading-none bg-[#F5F5F5] border-transparent rounded-[8px] font-normal;
+}/*# sourceMappingURL=style.css.map */

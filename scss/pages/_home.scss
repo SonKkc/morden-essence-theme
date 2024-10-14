@@ -1,0 +1,154 @@
+.head-section{
+    @apply py-[60px] sm:py-[30px];
+
+    .left_content{
+        @apply flex flex-col gap-[25px];
+
+        .image-container{
+            @apply relative;
+
+            img{
+                @apply w-full object-cover h-[322px] sm:h-[244px];
+            }
+
+            .tag{
+                @apply absolute bottom-0 ps-2;
+            }
+        }
+
+        .title{
+
+            h1{
+                @apply text-[22px] leading-[25px] font-black line-clamp-2 sm:line-clamp-3 sm:text-[20px];
+            }
+        }
+    }
+
+    .right_content{
+        @apply flex flex-col gap-[23px];
+
+    }
+}
+
+.top-stories{
+    @apply bg-black-30 py-[50px] sm:py-[28px];
+
+    ._cont{
+        @apply grid grid-cols-4 gap-[19px] sm:grid-cols-1 sm:gap-[30px];
+    }
+}
+
+.featured-post{
+    @apply pt-[60px] sm:py-[30px];
+
+    ._cont{
+        @apply grid grid-cols-3 gap-[20px] sm:grid-cols-1 sm:gap-[30px];
+
+        .post-col{
+            @apply flex flex-col mb-[50px] sm:mb-0;
+            
+            .post-1{
+                @apply pb-[20px] flex flex-col gap-2 sm:pb-[10px];
+
+                img{
+                    @apply h-[196px] w-full object-cover sm:h-[228px];
+                }
+
+                .tag{
+                    font-family: "Roboto", sans-serif;
+                    @apply text-[12px] font-medium uppercase pt-[10px];
+                }
+
+                .title{
+                    @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+                }
+            }
+
+            .post{
+                @apply text-[14px] leading-[16px] font-normal py-[20px] border-t border-grayy-10 line-clamp-3 sm:py-[10px];
+            }
+
+            .post:last-child{
+                @apply pb-0;
+            }
+                
+        }
+    }
+}
+
+.bg-newsletter{
+    @apply bg-black-30 py-[60px] sm:py-[25px];
+}
+
+.newsletter{
+    .line-flex{
+        @apply flex items-center gap-6;
+    }
+
+    .content{
+        @apply max-w-[656px] mx-auto py-[30px] sm:py-[24px] sm:w-full;
+
+        h2{
+            @apply text-[32px] font-bold capitalize w-7/12 sm:w-8/12 sm:text-[24px];
+        }
+
+        .input{
+            font-family: "Roboto", sans-serif;
+            @apply w-full flex items-center justify-center bg-whitee rounded-[3px] border-transparent my-[30px] sm:my-[25px];
+
+            input{
+                @apply w-full text-[20px] leading-[24px] sm:text-[10px] sm:ps-[17px] ps-[30px] font-normal bg-transparent outline-none shadow-none text-gray-800/50;
+            }
+
+            button{
+                @apply py-[13px] px-[30px] bg-oceann text-white rounded-[3px] text-[24px] leading-[24px] font-semibold uppercase sm:text-[14px] sm:leading-[14px] sm:py-[8px] sm:px-[18px];
+            }
+        }
+
+        .social{
+            @apply flex items-center justify-end gap-4;
+
+            span{
+                @apply text-[15px] font-black uppercase;
+            }
+        }
+    }
+}
+
+.latest-news{
+    @apply grid grid-cols-3 gap-[35px] py-[60px] sm:grid-cols-1 sm:gap-0;
+
+    .left_content{
+        @apply col-span-2;
+
+        ._cont{
+            @apply flex flex-col gap-[23px];
+
+            .item{
+                @apply flex gap-[20px] items-center;
+
+                img{
+                    @apply w-[204px] h-[139px] sm:h-[116px] sm:w-[146px] object-cover;
+                }
+
+                .content{
+                    @apply flex flex-col gap-2;
+            
+                    .tag{
+                        @apply ps-[10px];
+                    }
+            
+                    .title{
+                        @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .right_content{
+        @apply flex flex-col gap-[30px] sm:mt-[30px];
+    }
+}

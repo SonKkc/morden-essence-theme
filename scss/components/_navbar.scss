@@ -1,0 +1,137 @@
+header{
+    @apply sm:py-[20px] z-20;
+
+    .logo{
+        img{
+            @apply sm:h-[40px];
+        }
+    }
+}
+
+.navbar{
+    @apply relative z-20;
+}
+
+.nav_link{
+    @apply flex items-center text-whitee sm:hidden;
+
+    .item{
+        @apply py-[35px] px-[16.5px] flex items-center gap-1;
+
+        a{
+            @apply text-[14px] font-bold block;
+        }
+
+        p{
+            @apply text-[14px] font-bold block;
+        }
+
+        svg{
+            @apply text-whitee font-bold;
+        }
+    }
+
+    .item:hover{
+        a{
+            @apply text-oceann;
+        }
+
+        p{
+            @apply text-oceann;
+        }
+
+        svg{
+            @apply text-oceann;
+        }
+    }
+}
+
+.search{
+    @apply flex items-center gap-4 rounded-[10px] bg-grayy max-h-[27px] max-w-[163px] px-[9px] py-[4px] sm:hidden;
+
+    input{
+        @apply flex-1 w-full border-0 bg-transparent text-black-30 outline-none text-[14px];
+    }
+}
+
+
+.menulv2{
+    @apply absolute transition w-full h-fit bg-gray-200 right-0 top-full left-0 z-10;
+}
+
+
+.mobile-menu{
+    @apply sm:block hidden pe-[10px];
+}
+
+.nav__sidebar{
+    @apply w-full h-screen bg-black-30 fixed top-0 left-0 z-20;
+
+    .__container{
+        @apply p-6;
+
+        .__logo{
+            @apply relative w-full p-4;
+
+            .__name{
+                @apply flex items-center gap-4 w-full justify-center;
+
+                svg{
+                    @apply w-[25px] h-[25px];
+                }
+
+                p{
+                    font-family: 'Barlow', sans-serif;
+                    @apply text-3xl italic font-black text-white uppercase;
+                }
+
+            }
+
+            .-btn_exit{
+                @apply absolute top-0 right-0;
+
+                svg{
+                    @apply w-[25px] h-[25px];
+                }
+            }
+        }
+
+        .__navbar{
+            @apply my-10 px-[56px];
+        }
+        .__list{
+            @apply flex flex-col items-center;
+
+            .-item{
+                @apply w-full p-4 text-center;
+
+                .__link{
+                    font-family: 'Gotham-Light', sans-serif;
+                    @apply text-[20px] leading-[24px] uppercase text-white font-medium text-center; 
+                }
+
+                .-submenu{
+                    @apply flex flex-col gap-4 border-t-2 border-b-2 border-gray-600 py-4 my-2;
+
+                    .-subitem{
+                        @apply text-[18px] leading-[22px] font-medium normal-case text-white;
+                    }
+                }
+            }
+        }
+
+
+        .__search_bar{
+            @apply w-full py-2 flex items-center gap-2 border-b-2 border-white;
+            
+
+            input{
+                @apply w-full bg-transparent h-5 text-[16px] leading-[19.2px] font-medium text-[#FFFFFF] border-transparent outline-none ps-0;
+            }
+
+            .-btn_search{
+                @apply text-white w-[12px] h-[12px] me-2;
+            }
+        }
+    }
+}

@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap');
+body{
+    font-family: "League Spartan", sans-serif;
+    @apply bg-black text-whitee;
+}
+
+[x-cloak] { display: none !important; }
+
+.my_container{
+    @apply max-w-[994px] mx-auto sm:px-[30px] md:px-[15px];
+}
+
+.flex-center-between{
+    @apply flex items-center justify-between;
+}
+
+.grid-col3-gap35{
+    @apply grid grid-cols-3 gap-[35px] sm:grid-cols-1 sm:gap-0;
+
+    .left_content{
+        @apply col-span-2 ;
+    }
+
+    .right_content{
+        @apply col-span-1;
+    }
+}
+
+.grid-col2-gap4{
+    @apply grid grid-cols-2 gap-[19px] sm:grid-cols-1;
+}
+
+
+.span-before{
+    @apply before:block before:absolute before:-inset-1 before:-skew-x-[25deg] relative;
+
+    .span-cont{
+        font-family: "Roboto", sans-serif;
+        @apply relative text-white w-[75px] inline-block text-center uppercase text-[10px] font-black;
+    }
+}
+
+.info{
+    @apply flex items-center gap-2 py-[3px];
+
+    span{
+        font-family: "Roboto", sans-serif;
+        @apply text-[12px] font-medium;
+    }
+}
+
+.card{
+    @apply flex gap-4;
+
+    img{
+        @apply w-[146px] h-[116px] object-cover;
+    }
+
+    .content{
+        @apply flex flex-col gap-2;
+
+        .tag{
+            @apply ps-[10px];
+        }
+
+        .title{
+            @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+        }
+    }
+}
+
+.card-2{
+    @apply flex gap-[20px] items-center;
+
+    img{
+        @apply w-[204px] h-[139px] sm:h-[116px] sm:w-[146px] object-cover;
+    }
+
+    .content{
+        @apply flex flex-col gap-2;
+            
+        .tag{
+            @apply ps-[10px];
+        }
+            
+        .title{
+            @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+        }
+    }
+}
+
+.card-col{
+    @apply flex flex-col gap-2;
+
+    img{
+        @apply object-cover w-full h-[135px] sm:h-[213px];
+    }
+
+    .tag{
+        font-family: "Roboto", sans-serif;
+        @apply text-[12px] font-medium uppercase;
+    }
+
+    .title{
+        @apply text-[16px] leading-[18px] font-bold line-clamp-3;
+    }
+}
+
+
+.section-title{
+    @apply flex items-center gap-4 mb-[30px];
+
+    h2{
+        @apply text-[20px] leading-[23px] font-black capitalize;
+    }
+
+    .line{
+        @apply relative w-full h-[3px] bg-grayy-30 flex-1;
+
+        .line-active{
+            @apply absolute w-0 bottom-0 left-0 h-full transition-all duration-300 ease-out bg-grayy;
+        }
+    }
+}
+
+.eclip{
+    @apply w-[9px] h-[9px] rounded-full bg-oceann;
+}
+
+.line{
+    @apply w-full h-[3px] bg-grayy-30 flex-1;
+}
+
+.section-title h2:hover ~ .line .line-active{
+    @apply w-full;
+}
+
+.see-more{
+    @apply flex items-center gap-4 mt-[40px];
+
+    .btn{
+        @apply flex items-center justify-center px-[39px] py-[8px] bg-[#D9D9D9] rounded-[3px];
+
+        span{
+            @apply text-[16px] leading-[15px] text-oceann font-black uppercase;
+        }
+    }
+}
+
+.advertisement{
+    @apply bg-darkk flex items-center justify-center mx-auto;
+}
+
+.hot-categories{
+    @apply flex flex-col;
+
+    ._cont{
+        @apply flex flex-col gap-[12px];
+
+        .item{
+            @apply relative w-full h-[80px] sm:h-[96px] rounded-[3px] overflow-hidden;
+
+            .bg-img{
+                @apply bg-cover bg-no-repeat bg-center h-full inset-0 absolute;
+                width: 110%;
+                background-position: center left -10px;
+                transition: background-position 0.2s ease; 
+            }
+
+            .overlay{
+                @apply absolute z-10 px-[26px] inset-0 bg-overlayy flex items-center justify-between gap-2;
+
+                span{
+                    @apply text-[16px] font-black capitalize;
+                }
+
+                .circle{
+                    @apply w-[27px] h-[27px] rounded-full bg-whitee flex items-center justify-center transition duration-200 ease-in-out;
+
+                    span{
+                        @apply text-[10px] leading-[10px] font-semibold text-black transition duration-200 ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .item:hover {
+            .bg-img {
+                background-position: center;
+            }
+
+            .overlay{
+
+                .circle{
+                    @apply bg-oceann;
+                    span{
+                        @apply text-whitee;
+                    }
+                }
+            }
+        }
+    }
+}
